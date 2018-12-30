@@ -26,7 +26,7 @@ labelNames = ["airplane", "automobile", "bird", "cat", "deer",
 
 # initialize the optimizer and model
 print("compiling model...")
-opt = SGD(lr=0.01, decay=0.01 / 40, momentum=0.9, nesterov=True)
+opt = SGD(lr=0.01)
 model = smallvggnet.SmallVGGNet.build(width=32, height=32, depth=3, classes=10)
 model.compile(loss="categorical_crossentropy",optimizer=opt,metrics=["accuracy"])
 
