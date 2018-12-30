@@ -52,10 +52,11 @@ print(classification_report(testY.argmax(axis=1),
 # plot the training loss and accuracy
 plt.style.use("ggplot")
 plt.figure()
-plt.plot(np.arange(0, 20), H.history["loss"], label="train_loss")
-plt.plot(np.arange(0, 20), H.history["val_loss"], label="val_loss")
 plt.plot(np.arange(0, 20), H.history["acc"], label="train_acc")
 plt.plot(np.arange(0, 20), H.history["val_acc"], label="val_acc")
+plt.plot(np.arange(0, 20), H.history["loss"], label="train_loss")
+plt.plot(np.arange(0, 20), H.history["val_loss"], label="val_loss")
+
 plt.title("train loss and accuracy")
 plt.xlabel("epoch")
 plt.ylabel("loss/accuracy")
